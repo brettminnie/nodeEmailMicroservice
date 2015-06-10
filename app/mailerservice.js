@@ -26,7 +26,7 @@ var mailerService = {
             rootNode = mailerConfig.services;
 
         for (serviceName in rootNode) {
-            this.mailServices[serviceName] = nodeMailer.createTransport(rootNode[serviceName].transportType, {
+            this.mailServices[serviceName] = nodeMailer.createTransport({
                 service: serviceName,
                 auth   : {
                     user: rootNode[serviceName].user,
@@ -34,11 +34,17 @@ var mailerService = {
                 }
             });
         }
-    }/*,
+    },
 
-    send: function() {
-
-    }*/
+    send: function(mailerInstance, messageInstance) {
+        mailerInstance.sendMail(mailOptions, function(error, response){
+            if(error){
+                console.log(error);
+            }else{
+                console.log("Message sent: " + response);
+            }
+        });
+    }
 };
 
 module.exports = mailerService.init();

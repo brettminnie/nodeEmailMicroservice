@@ -6,11 +6,12 @@ var mailerConfig = {
             user: 'brett.minnie@gmail.com',
             secret: 'vvjpgqyrmdwdgzck'
         },
-        gmail2 : {
-            service: 'Gmail',
+        smtp : {
             transportType: 'SMTP',
-            user: 'brett.minnie@gmail.com',
-            secret: 'vvjpgqyrmdwdgzck'
+            host: 'host.mailserver.com',
+            port: '25',
+            user: 'username',
+            secret: 'password'
         }
     }
 };

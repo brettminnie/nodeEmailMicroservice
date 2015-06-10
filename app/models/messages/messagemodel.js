@@ -1,7 +1,8 @@
 var messageModel = {
     body:     null,
     template: null,
-    format:   'text'
+    format:   'text',
+    tokens:   null
 };
 
 module.exports = messageModel;

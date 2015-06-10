@@ -17,5 +17,16 @@ describe('MailerConfig loading tests', function () {
             Object.keys(mailerConfig.services[Object.keys(mailerConfig.services)[0]])
         );
     });
+
+    it('The second key should be called smtp', function () {
+        assert.equal('smtp', Object.keys(mailerConfig.services)[1]);
+    });
+
+    it('The second key should contain the following keys [\'transportType\', \'host\', \'port\', \'user\', \'secret\']', function () {
+        assert.deepEqual(
+            [ 'transportType', 'host', 'port', 'user', 'secret' ],
+            Object.keys(mailerConfig.services[Object.keys(mailerConfig.services)[1]])
+        );
+    });
 });
 

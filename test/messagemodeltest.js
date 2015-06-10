@@ -8,9 +8,9 @@ var messageModel = require('../app/models/messages/messagemodel');
 
 describe('Message model initialisation', function () {
 
-    it('The model should contain the following keys [\'body\', \'template\', \'format\']', function () {
+    it('The model should contain the following keys [\'body\', \'template\', \'format\', \'tokens\']', function () {
         assert.deepEqual(
-            [ 'body', 'template', 'format' ],
+            [ 'body', 'template', 'format', 'tokens' ],
             Object.keys(messageModel)
         );
     });
@@ -25,5 +25,9 @@ describe('Message model initialisation', function () {
 
     it('The format key must be the string "text"', function () {
         assert.equal('text', messageModel.format);
+    });
+
+    it('The tokens key must be null', function () {
+        assert.equal(null, messageModel.tokens);
     });
 });
