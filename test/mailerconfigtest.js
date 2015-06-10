@@ -1,8 +1,8 @@
 var assert = require('assert');
 var mailerConfig = require('../config/mailerconfig');
 
-describe('MailerConfig Loaded', function () {
-    it('Should contain 2 service entries if loaded correction', function () {
+describe('MailerConfig loading tests', function () {
+    it('Should contain 2 service entries if loaded correctly', function () {
         assert.equal(2, Object.keys(mailerConfig.services).length);
 
     });
