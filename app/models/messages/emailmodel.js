@@ -1,8 +1,8 @@
-var email = {
+var emailModel = {
     recipients: [],
     sender: [],
     message: null
 };
 
-module.exports = email;
+module.exports = emailModel;
 

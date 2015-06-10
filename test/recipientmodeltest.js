@@ -1,5 +1,5 @@
 var assert = require('assert');
-var model = require('../app/models/recipientmodel');
+var model = require('../app/models/messages/recipientmodel');
 
 describe('Recipient model initialisation', function () {
 

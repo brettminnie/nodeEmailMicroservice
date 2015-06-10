@@ -4,7 +4,7 @@
  format:   'text'
  */
 var assert = require('assert');
-var messageModel = require('../app/models/messagemodel');
+var messageModel = require('../app/models/messages/messagemodel');
 
 describe('Message model initialisation', function () {
 
