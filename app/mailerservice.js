@@ -34,11 +34,11 @@ var mailerService = {
                 }
             });
         }
-    },
+    }/*,
 
     send: function() {
 
-    }
+    }*/
 };
 
 module.exports = mailerService.init();
