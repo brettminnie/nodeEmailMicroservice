@@ -1,9 +1,14 @@
+/*jslint node: true */
+'use strict';
+
 var assert = require('assert');
 var model = require('../app/models/messages/emailmodel');
+var senderModel = require('../app/models/messages/sendermodel');
 
-describe('Email model initialisation', function () {
+describe('Email model initialisation', function() {
 
     it('The model should contain the following keys [\'recipients\', \'sender\', \'message\']', function () {
+        console.log(Object.keys(model));
         assert.deepEqual(
             [ 'recipients', 'sender', 'message' ],
             Object.keys(model)
@@ -15,12 +20,12 @@ describe('Email model initialisation', function () {
         assert.equal(0, model.recipients.length);
     });
 
-    it('The sender key must be an empty array', function () {
-        assert.equal('[object Array]', Object.prototype.toString.call(model.sender));
-        assert.equal(0, model.sender.length);
+    it('The sender key must be null', function () {
+        assert.equal(null, model.sender);
     });
 
     it('The message key must null', function () {
         assert.equal(null, model.message);
     });
+
 });
