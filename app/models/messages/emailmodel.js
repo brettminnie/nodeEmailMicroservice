@@ -60,5 +60,5 @@ EmailModel.prototype = {
     }
 };
 
-module.exports = new EmailModel();
+module.exports = EmailModel;
 

@@ -2,8 +2,7 @@
 'use strict';
 
 var assert = require('assert');
-var model = require('../app/models/messages/emailmodel');
-var senderModel = require('../app/models/messages/sendermodel');
+var model = new (require('../app/models/messages/emailmodel'))();
 
 describe('Email model initialisation', function() {
 

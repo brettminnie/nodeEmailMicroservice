@@ -4,30 +4,30 @@
  format:   'text'
  */
 var assert = require('assert');
-var messageModel = require('../app/models/messages/messagemodel');
+var model = new (require('../app/models/messages/messagemodel'))();
 
 describe('Message model initialisation', function () {
 
     it('The model should contain the following keys [\'body\', \'template\', \'format\', \'tokens\']', function () {
         assert.deepEqual(
             [ 'body', 'template', 'format', 'tokens' ],
-            Object.keys(messageModel)
+            Object.keys(model)
         );
     });
 
     it('The body key must be null', function () {
-        assert.equal(null, messageModel.body);
+        assert.equal(null, model.body);
     });
 
     it('The template key must be null', function () {
-        assert.equal(null, messageModel.template);
+        assert.equal(null, model.template);
     });
 
     it('The format key must be the string "text"', function () {
-        assert.equal('text', messageModel.format);
+        assert.equal('text', model.format);
     });
 
     it('The tokens key must be null', function () {
-        assert.equal(null, messageModel.tokens);
+        assert.equal(null, model.tokens);
     });
 });
