@@ -1,5 +1,8 @@
+/*jslint node: true */
+'use strict';
+
 var assert = require('assert');
-var model = require('../app/models/messages/recipientmodel');
+var model = new (require('../app/models/messages/recipientmodel'))();
 
 describe('Recipient model initialisation', function () {
 
