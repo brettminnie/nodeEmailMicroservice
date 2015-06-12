@@ -55,7 +55,7 @@ describe('Sender model initialisation', function () {
         assert.equal(expected, model.getReplyToEmail());
     });
 
-    it('I can set the senderName and email and retried a contactenatedForm with getFullSenderName', function () {
+    it('I can set the senderName and email and retrieve a contactenated form with getFullSenderName', function () {
         var expectedSender = 'Test Sender';
         var expectedEmail = 'test.sender@domain.tld';
         model.setSenderEmail(expectedEmail);

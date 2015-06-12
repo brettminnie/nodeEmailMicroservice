@@ -24,8 +24,17 @@ RecipientModel.prototype = {
         this.recipientEmail = recipientEmail;
     },
 
-    getReciepientEmail: function () {
+    getRecipientEmail: function () {
         return this.recipientEmail;
+    },
+
+    getFullRecipientName: function () {
+        if (
+            null !== this.recipientEmail && this.recipientEmail.length &&
+                null !== this.recipientName && this.recipientName.length
+        ) {
+            return this.recipientName + '<' + this.recipientEmail + '>';
+        }
     }
 };
 
