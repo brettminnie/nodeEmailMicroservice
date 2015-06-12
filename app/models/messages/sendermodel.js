@@ -23,7 +23,10 @@ SenderModel.prototype = {
     },
 
     getFullSenderName: function () {
-        if (this.senderEmail.length && this.senderName.length) {
+        if (
+            (null !== this.senderEmail && this.senderEmail.length) &&
+                (null !== this.senderName && this.senderName.length)
+        ) {
             return this.senderName + '<' + this.senderEmail + '>';
         }
 
