@@ -9,7 +9,7 @@
  **/
 
 var assert = require('assert');
-var model = require('../app/models/messages/sendermodel');
+var model = new (require('../app/models/messages/sendermodel'))();
 
 describe('Sender model initialisation', function () {
 
