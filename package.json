@@ -1,0 +1,33 @@
+{
+  "name": "node-email-service",
+  "version": "0.0.1",
+  "description": "An email micro service for node js",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "ejs": "^2.3.1",
+    "email-templates": "^2.0.0-beta.1",
+    "express": "^4.12.4",
+    "grunt": "^0.4.5",
+    "mongoose": "^4.0.5",
+    "morgan": "^1.5.3",
+    "nodemailer": "^1.3.4"
+  },
+  "devDependencies": {
+    "better-assert": "^1.0.2",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brettminnie/nodeEmailMicroservice.git"
+  },
+  "author": "Brett Minnie <github@bdb-studios.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brettminnie/nodeEmailMicroservice/issues"
+  },
+  "homepage": "https://github.com/brettminnie/nodeEmailMicroservice#readme"
+}
